@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/ctuto/!svn/ver/1/trunk/chap4
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/ctuto/!svn/ver/1/trunk/chap4/test.c
+END
+test.s
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/ctuto/!svn/ver/1/trunk/chap4/test.s
+END
+ex4_3.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ctuto/!svn/ver/1/trunk/chap4/ex4_3.c
+END
+ex4_3.s
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ctuto/!svn/ver/1/trunk/chap4/ex4_3.s
+END
+test4.c
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ctuto/!svn/ver/1/trunk/chap4/test4.c
+END
+test.out
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/ctuto/!svn/ver/1/trunk/chap4/test.out
+END
+calc.h
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/ctuto/!svn/ver/1/trunk/chap4/calc.h
+END
+ex4_3.out
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ctuto/!svn/ver/1/trunk/chap4/ex4_3.out
+END
+test.cout
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ctuto/!svn/ver/1/trunk/chap4/test.cout
+END
+test4.out
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/ctuto/!svn/ver/1/trunk/chap4/test4.out
+END

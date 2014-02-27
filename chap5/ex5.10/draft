@@ -1,0 +1,91 @@
+In case input is:
+23 23+ -
+
+
+What's different between two method ?
+	1. get char continuostly input
+	2. get char from array of strings.
+		if in this method there is case 23 23+ -. How can you solve this ?
+
+	
+
+How do getop() function work ?
+
+1. getch()  2 is digit, store 2 in char c so it will check next char. c = 2
+	check next char 3 is digit so c = pow(c) + 3
+	check next char r is non digit so r will be ungetch. 
+	and return 23
+
+2. getch():
+	2.1 get from buffer. (it's stored by ungetch() function).
+	get r from buffer. 
+		check digit
+			if not digit
+				by pass
+	check next input
+		if is digit
+			2 is digit, store in c. So it continue to check next input
+				if is digit
+					c = pow(c) + next digit
+				if not
+					ungetch()
+3. getch()
+
+	get + . It's not digit. so it return + and the array return is null
+
+
+--------------------------------------------		 
+
+Use *argv[] as parameter.
+
+char line[MAXLINE];
+while (--argc > 0)
+	c = (getop(line ,(*++argv)[0]))
+	switch (c)
+		case NUMBER
+		case '+'
+			do addition
+			break;
+		default 
+		break;
+	
+end while
+
+
+// In case 23 32+-
+Define function getop(char [], char **)
+	while (c = getch(pointer))
+	
+	check buffer first
+		
+		if character in buffer is digit
+	
+		if character in buffer is not digit
+			
+	if is digit (c = (*++argv)[0]) 
+		
+		while (isdigit(*argv[0]))
+			c = pow(c) + *argv[0];
+		
+		if is not digit
+			ungetch(c)
+		return digit;
+	
+	if not digit
+		return non digit.
+
+	return NUMBER;
+
+	
+Define function getch(char c(should be pointer or not ? if using pointer so what's type of pointer)
+	if (still have something in buffer)
+		get something from buffer and return
+	if not
+		get something from parameter and return
+Problem: if this function have argument, it maybe use or not ? I don't find anyway to do this :(
+
+Define function ungetch(char c)
+	check buffer have available memory
+		push c in buffer stack
+	if not
+		show error message	

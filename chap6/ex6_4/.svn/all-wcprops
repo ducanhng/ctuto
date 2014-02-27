@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/ctuto/!svn/ver/35/trunk/chap6/ex6_4
+END
+test.2.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ctuto/!svn/ver/35/trunk/chap6/ex6_4/test.2.c
+END
+mysort.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ctuto/!svn/ver/35/trunk/chap6/ex6_4/mysort.h
+END
+ex6_4.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ctuto/!svn/ver/35/trunk/chap6/ex6_4/ex6_4.c
+END
+mysortv2.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ctuto/!svn/ver/35/trunk/chap6/ex6_4/mysortv2.c
+END

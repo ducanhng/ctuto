@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1
+END
+getch.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/getch.h
+END
+getint.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/getint.h
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/test.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/main.c
+END
+main.out
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/main.out
+END
+getch.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/getch.c
+END
+getint.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.1/getint.c
+END

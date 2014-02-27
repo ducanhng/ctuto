@@ -1,0 +1,33 @@
+Note for ex 5.18
+
+1. What are the differents between dcl with direct-dcl ?
+define:
+dcl: declaration. Function dcl is used to parse declarator
+direct-dcl: direct declaration. Function dir-dcl is used to parse direct declarator
+
+So what are the differents between declarator with direct declarator ?
+	declarator(dcl) is direct declarator, perhaps(optionals) preceded *'s . OK, so direct-dcl is also dcl.
+	direct declarator(direct-dcl) name
+			 (dcl)
+			direct-dcl()
+			direct-dcl[optional size]
+Very clear !
+
+2. How does the main function in the exercise work ? and order process ?
+
+Ok, Now let's analyst the requirements of 5.18
+before analysting, I have to understand all line of code in the example. It's very interesting program, and have a bit confuses. 
+
+for exp: int (*pfa[3])() how to read it ?
+
+pfa: is a name
+pfa[3]: array[3] of 
+*pfa[3]: array[3] of pointer to
+int (*pfa[3])() array[3] of pointer to function returning to int 
+
+3. Bugs
+
+- Error appear when declare: int (*comp)(const char[])
+Expected return: comp: pointer to function (const array of char) returning to int
+
+ezpay 9888

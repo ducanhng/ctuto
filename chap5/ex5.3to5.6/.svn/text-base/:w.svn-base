@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+main()
+{
+	char s[10] = "ducanhng";
+	printf("printf element have outbound of array %c",s[13]);
+}

@@ -1,0 +1,19 @@
+Ex 5.14:
+
+Modify the sort program to handle a -r flag, which indicates sorting in reverse (decreasing) order. Be sure that -r work with -n.
+
+Analyst:
+	For exp:
+	Pattern:
+		sort -nr // decrease the list order by number
+		sort -r // sort the list in reverse order
+		sort -n // sort the list in number.
+		sort // default.
+
+	Options:
+	-n: sort the list by numberic
+	-r: sort the list in reverse order
+	default: sort the list by increase.
+
+
+

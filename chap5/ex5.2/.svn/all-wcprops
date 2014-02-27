@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2
+END
+getch.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/getch.h
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/test.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/main.c
+END
+a.out
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/a.out
+END
+getfloat.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/getfloat.c
+END
+main.out
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/main.out
+END
+getch.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/getch.c
+END
+getfloat.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.2/getfloat.h
+END

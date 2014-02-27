@@ -1,0 +1,179 @@
+/*
+
+Ex 5.18: Make dcl recover from input errors
+Note: Input errors recovered:
+1. Handles arguments types in functions
+2. Qualifiers like const
+3. Spurious blanks confuse
+
+Author: ducanhng
+Based on source in K&Rv2 p102
+Date Created: 20 Oct 2011
+
+*/
+
+
+#include <stdio.h>
+#include "getch.h"
+#include <string.h>
+#include <ctype.h>
+#define MAXLINE 100
+
+int getch();
+void ungetch(int);
+void dcl(void);
+void dirdcl(void);
+int gettoken(void);
+
+char out[1000];// output
+char token[MAXLINE];//to store last token received
+char datatype[MAXLINE];//to store data type returning (char, int, void ...)
+int tokentype;// to store type of token as NAME, PARENS, BRACKETS
+char name[MAXLINE];
+enum {PARENS, BRACKETS, NAME, QUALIFIER, VARIABLE};// constant token type list
+
+int main()
+{
+	// Scan input stream.
+	while (gettoken() != EOF)
+	{
+		// firstly, check datatype and save to datatype array.
+		// bullshit code
+		strcpy(datatype,token);
+		// start writing to ouput by put end of line at the first element of the output array
+		out[0] = '\0';
+		// start parsing declerator
+		dcl();
+		if (tokentype != '\n')
+		{
+			printf("syntax error ! \n");
+			return;
+		}
+		printf("%s: %s %s \n", name, out, datatype);
+	}
+	return 0;
+}
+
+void dcl(void)
+{
+	int ns;
+	for (ns = 0; gettoken() == '*';)
+		ns++;
+	dirdcl();
+	// write pointer to here
+	while (ns-- > 0)
+		strcat(out," pointer to");
+}
+
+void dirdcl(void)
+{
+	int type;
+	if (tokentype == '(')// run dcl (dcl)
+	{
+		dcl();
+		if (tokentype != ')')
+		{
+			printf("syntax error: missing )\n");
+			return;
+		}
+	}
+	else if (tokentype == NAME)
+		strcpy(name, token);
+	else 
+	{
+		printf("syntax error: expected name or (dcl)\n");
+		return;
+	}
+
+	type = gettoken();
+	
+	if (type == '(')
+	{
+		// identify function
+		strcat(out, " function(");
+		while ((tokentype = gettoken()) == VARIABLE || tokentype == BRACKETS)
+		{
+			if (tokentype == BRACKETS)
+			{
+				strcat(out, " array");
+				strcat(out, token);
+				strcat(out, " of");
+			}
+			else if (tokentype == VARIABLE)
+			{
+				strcat(out, token);
+				//put a space between variable and qualifier
+				strcat(out, " ");
+			}
+		}
+		
+		if (tokentype == ')')
+		{
+			strcat(out, ") returning");
+			type = gettoken();	
+		}
+		else
+		{
+			printf("syntax error in function declaration: missing )\n");
+			return;
+		}
+	}
+	else if (type == BRACKETS)
+	{
+		strcat(out, " array");
+		strcat(out, token);
+		strcat(out, " of");
+		gettoken();		
+	}
+}
+
+// get the last token from input
+int gettoken(void)
+{
+	int c;
+	char *p = token;
+	// skip blanks or spaces
+	while ((c = getch()) == ' ' || c == '\t')
+		;
+	// c is brackets
+	if (c == '[')
+	{
+		for (*p++ = c; (*p++ = getch()) != ']';)
+			;
+		*p = '\0';
+		
+		return tokentype = BRACKETS;
+	}
+	else if (isalpha(c))
+	{
+		// isalnum(char) checks character is alphabet or number
+		for (*p++ = c; isalnum(c = getch());)
+			*p++ = c;
+		*p = '\0';
+		char token1[20];
+		char *q = token1;
+		*q = '\0';
+		if (c == ',')
+		{
+			while (isalnum(c = getch()))
+				*q++ = c;
+			*q = '\0';	
+		}
+		
+		ungetch(c);
+		// Make comparision here
+		if (strcmp(token,"int") == 0 || strcmp(token,"double") == 0 || strcmp(token, "float") == 0 || strcmp(token,"char") == 0 || strcmp(token, "const") == 0)
+		{
+			if (token1[0] != '\0' && (strcmp(token1,"int") == 0 || strcmp(token1,"double") == 0 || strcmp(token1, "float") == 0 || strcmp(token1,"char") == 0 || strcmp(token1, "const") == 0))
+			{
+				strcat(token,",");
+				strcat(token,token1);
+			}
+			return tokentype = VARIABLE;
+		}
+		
+		return tokentype = NAME;
+	}
+	else 
+		return tokentype = c;	
+}

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.3to5.6
+END
+:w
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.3to5.6/:w
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.3to5.6/test.c
+END
+a.out
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.3to5.6/a.out
+END
+ex5.6.zip
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.3to5.6/ex5.6.zip
+END

@@ -1,0 +1,103 @@
+Analyst for ex 5-16.
+
+Add the -d (directory order) option which make comparisons only on letters, numbers and blanks. Make sure it work in conjunction with -f.
+----------------------
+
+Use case:
+No	Command			Explaination
+---	--------------		---------------------
+1	qsort -df		Sort the list order by directory, fold upper and lower case together
+2	(default)qsort		Sort the list by default. Use routine strcmp.
+3	qsort -d		Sort the list order by directory
+
+
+3. qsort -d
+There are some cases:
+
+	Before			After	
+	chap 1			1 1a
+				1 2c			
+				12abc	
+	1 1a			12def
+	1 2c			1 chap			
+	chap 10			chap 1
+	chap 5			chap 1   -
+	chap			chap 5
+	chap 1   -		chap 10
+	1 chap			chap
+	chap1			chap1	
+	12def			
+	12abc			
+	
+What's order to solve:
+
+	Rule:
+	- digit < blank < the letter in alphabet (in ASCII, blank(32) is the smallest number in decimal)
+	This rule is not correct.
+	find another way		
+
+another way:
+- Break string into chunks. alphabet, number. 
+- Make compare chunks
+
+for exp: 12abc 3 will be separeted into four chunks: 12 , abc, <space>, 3
+How to write it ?
+How to break string into chunks. What's algorithm ?
+for (;trunk1 != end; trunk1++, trunk2++)
+{
+	if (isdigit(trunk1) and isdigit(trunk2) and trunk1 == trunk2)
+	{
+		trunk1++;trunk2++;
+		if (isblank(trunk1) && is blank(trunk2))
+			return 0;
+		else if (isblank(trunk1) && !isblank(trunk2)
+			return -1;
+		else if (!isblank(trunk1))
+			return strcmp(trunk1, trunk2);
+	}
+	else if (!isdigit(trunk1) && isblank(trunk1))
+	{
+		
+	}
+}
+
+
+while (*s++ != '\0')
+{
+	if (isdigit(*s))
+	{
+		
+		while (isdigit(*s++))
+		{
+			store digit in string array.
+		}
+	}
+	
+	
+	if (isalpha(s))
+	{
+		while (!isdigit(*s++))
+		{
+			store str in string array.
+		}
+	}
+	if (isspace(s))
+	{
+		store str in string array.
+	}
+}
+
+That mean string array will store both number and string. It's not a good way.
+
+
+4. Another explanation:
+
+-d : directory order (or dictionary order)
+
+for exp: 
+	chap1 - Not Accept
+	chap2 - Not Accept
+	chap1 - Accept
+	chap1 + Accept
+	chap 1 * Accept
+	chap 1

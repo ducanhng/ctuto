@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+
+int count;
+int *pcount;
+int main()
+{
+	printf("value of count is %d\n",count);
+	if (pcount == NULL)
+		printf("pointer to null\n");
+}

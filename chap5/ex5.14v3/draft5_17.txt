@@ -1,0 +1,87 @@
+Exercise 5-17. Add a field-searching capability, so sorting may bee done on fields within lines,
+each field sorted according to an independent set of options. (The index for this book was
+sorted with -df for the index category and -n for the page numbers.)
+
+
+----
+Solution:
+
+chap1	23
+chap2	42
+chap3	54
+
+
+How to sort this ?
+
+use this option: -k m,n
+m is start of field
+
+
+Note from gnu.org
+'-k pos1[,pos2]’
+‘--key=pos1[,pos2]’
+    Specify a sort field that consists of the part of the line between pos1 and pos2 (or the end of the line, if pos2 is omitted), inclusive.
+
+    Each pos has the form ‘f[.c][opts]’, where f is the number of the field to use, and c is the number of the first character from the beginning of the field. Fields and character positions are numbered starting with 1; a character position of zero in pos2 indicates the field's last character. If ‘.c’ is omitted from pos1, it defaults to 1 (the beginning of the field); if omitted from pos2, it defaults to 0 (the end of the field). opts are ordering options, allowing individual keys to be sorted according to different rules; see below for details. Keys can span multiple fields.
+
+    Example: To sort on the second field, use --key=2,2 (-k 2,2). See below for more notes on keys and more examples. See also the --debug option to help determine the part of the line being used in the sort. 
+n is end of field
+----------------
+
+Each fields will be separated by space or tab.
+
+Requirements:
+1. Must define where can get the field by space or tab. 
+For exp: input: today is a good day. The program must analyst there are 5 fields in the line of input.
+Each field is separated by space or tab.
+2. You must design the rule after -k option.
+follow the pattern: -k pos1,pos2
+pos have format: f([.c][opts]): f is number of field(must be a digit). c is digit and option maybe some thing like r or n.
+	2.1 -k must have arguments
+	2.2 The first letters in arguments of -k must be digit, next arguments of -k option can be: r|n|b...
+
+sort -k 5df: Mean  sort field has position 5 by df option.
+sort -df -k 5df: Mean sort fields 
+
+
+flowchart:
+
+check arguments:
+
+	if is sort by field (-k option)
+		if (nextinput is digit)
+			store digit as postion of field
+		
+		check the option after digit
+			if option in avaiable option (rndfn)
+				store option for the field
+			else 
+				throw invalid option
+		end check
+		end if	
+		else
+			throw invalid option
+	else is sort by lines.	
+
+compare:
+	if is compare by field
+		get field from store
+		get option for store
+		make compare
+	else
+		compare by lines
+
+how to find the postion of field:
+	pos = 0;
+	for (; p != '\0'; p++)
+	{
+		if isblankortab(p)
+			while (next char is char)
+				pos ++;
+		
+
+	}
+
+sort '  foo      bar		t '
+Here is default delimiter separate in unix
+there are three fields: '  foo     ' and 'bar		' and 't '

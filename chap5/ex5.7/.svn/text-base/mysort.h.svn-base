@@ -1,0 +1,10 @@
+void swap(char *[], int, int);
+void qsort(char *[], int, int);
+void selectinsort(char *[], int);
+void insertionsort(char *[], int);
+void bubblesort(char *[],int);
+void shellsort(char *[],int);
+void merge(char *[],int,int,int);
+void mergesort(char *[],int, int);
+void heapify(char *[], int);
+void heapsort(char *[], int);

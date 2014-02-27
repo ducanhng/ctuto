@@ -1,0 +1,23 @@
+Analyst ex 5.12
+
+entab -m +n
+
+There are some case
+entab		// entab with default tabsize
+entab -m	// entab from column m. If m is not digit, notice "Is not valid argument: m "
+entab -m +n	// entab from column m with tabstops in every n columns. If m or n is not digit, notice "Is not valid argument: m or n" 
+entab +n	// entab with n tabsize. If n is not digit, notice "Is not valid argument: n"
+
++ is sign for tabsize
+- is sign for start column
+ 
+Confuse: 
+1. I don't know should do I apply all cases to write program ?. Is it too big ? 
+2. Why use signal + and -, why don't use this pattern 'entab m n'. (first argument will be start column, second argument will be tabsize). 
+
+Get first argument
+
+	check if sign
+		if plus
+			
+		if not

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ctuto/!svn/ver/35/trunk/chap6/test/test2
+END
+answer.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ctuto/!svn/ver/35/trunk/chap6/test/test2/answer.c
+END
+c-vars.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ctuto/!svn/ver/35/trunk/chap6/test/test2/c-vars.c
+END

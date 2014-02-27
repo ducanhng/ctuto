@@ -1,0 +1,5 @@
+pstr is pointer to array of pointers. Value of pstr is address of first element in array of pointers. 
+So pstr[0] to first element of string pstr is pointed. pstr[1] is next char of sstring and is the same as pstr[0] + 1.
+so pstr is pointer to address of first element in array of pointer.&pstr = address of 
+pstr[0] is H
+pstr[1] is e 

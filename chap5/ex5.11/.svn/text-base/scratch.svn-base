@@ -1,0 +1,92 @@
+****** entab and detab program ******
+
+What's the meaning of detab program ?
+
+Give examples about it ?
+	
+for exp: 
+kdk	dkkd	dkdk	dkk	kdd
+kd	kdk	kd	k	dkkd
+
+12345678
+
+As you see, tabstop is 8 spaces(by default in *nix).
+
+Detab: Fill proper spaces to fix tabsize
+	
+Entab: Fill tab to replace spaces.
+
+
+Analyst ex1.20: Code written by ducanhng 20, March 2011.
+
+Use bufferline to store a line, buffer to store many lines.
+
+1. maxcolumn is used for counting space. Should I need it for calculation ? No, I don't need.
+2. the program don't print correctly elements in buffer. Maybe I put wrong end of line ('\0'). It's ok right now.
+3. Source code is too long (107 LOC)
+
+Conclusion: This program is bad :(. Need to improve to version 2.
+
+Version2: 
+
+1. Use pointer replace array in function getline1().
+2. If integer variable is assigned, is it correct ?
+For exp: 
+	int c;
+	char d = '7';
+	d = c;// is it correct ?
+	c = d;// is it correct ?
+What happen if declare int p[3];
+then p[3] = 10;
+print array p, show the display
+3. Why use pointer to array pointer as argument in main(int argc, **argv) ?
+What's happen if I use pointer in argv ? 
+
+How can I apply pointer to array pointer in other case ?
+
+4. detab 5 9
+	5th is the first tabstop
+	9th is the second tabstop
+	17th, 25th, 33th ... are the next tabstop columns (if default tabstop is 8)
+	...
+
+It requires argv must be increment
+
+if (c == '\t')
+	if index < tabstop(index)
+		spaces available = tabstop - index;
+How to calculate tabstop.
+
+Use lasttabstop as external variable ? Is it a good way. Any method to do this ?
+
+
+int tabstop(index, char **argv)
+{
+	tabstop = 0;
+
+	while (--argc > 0)
+		if index < *++argv
+			tabstop = *argv
+			return tabstop
+		tabstop = *argv
+	while (index > tabstop)	
+		tabstop += TABSIZE
+	return tabstop
+}
+
+******** entab program **********
+
+For exp:
+	entab 5 9
+What does program do ?
+Input: abc     cd         jjj
+
+
+
+
+	
+	
+		
+
+
+

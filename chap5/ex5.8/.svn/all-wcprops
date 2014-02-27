@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.8
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.8/test.c
+END
+a.out
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.8/a.out
+END
+ex5.8.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/ctuto/!svn/ver/1/trunk/chap5/ex5.8/ex5.8.c
+END

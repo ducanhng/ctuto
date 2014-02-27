@@ -1,0 +1,10 @@
+getvar -n [number]
+or 
+getvar -n[number]
+or 
+getvar 
+default value is 6 number length
+
+Get variable with number length
+error:
+getvar -n [number] 

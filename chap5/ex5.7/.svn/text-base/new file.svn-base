@@ -1,0 +1,43 @@
+Shell sort
+
+
+
+Quick sort
+
+1	2	3	4	5	6	7	8	9	10
+33	23	53	24	93	29	19	34	22	90
+
+sort by increment.
+19	22	23	24	29	[33]	34	53	90	93
+
+pivot: 33
+
+step1: Identify from left to right, see 53 > pivot in position 3
+Identify from right to left: see 22 < pivot in position 8
+	change position of 3 to 8
+
+1	2	3	4	5	6	7	8	9	10
+33	23	22	24	93	29	19	53	34	90
+
+Next: 
+
+33	23	22	24	19	29	93	53	34	90
+
+33	23	22	24	19	29	93	53	34	90
+
+29	23	22	24	19	33(fixed)	93	53	34	90
+
+End of step 1
+Next step is choose pivot, and iterate the process.
+
+Done !
+	
+
+ducanhng
+01234567
+g
+
+h e l l o \n \0
+
+
+		 
